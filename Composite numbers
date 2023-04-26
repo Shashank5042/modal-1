@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int start, end, i, j;
+    printf("Enter the start of the range: ");
+    scanf("%d", &start);
+    printf("Enter the end of the range: ");
+    scanf("%d", &end);
+    printf("Composite numbers between %d and %d are: ", start, end);
+    for (i = start; i <= end; i++) {
+        for (j = 2; j <= i/2; j++) {
+            if (i % j == 0) {
+                printf("%d ", i);
+                break;
+            }
+        }
+    }
+    printf("\n");
+    return 0;
+}
